@@ -14,15 +14,22 @@
         <h2>Vacation Contest Sign-Up Form</h2>
          <!-- TODO: Set Action and Method Properties -->
             <form action="results.html" method="GET"> 
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname"> 
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname"> 
-                
+                <label for="firstname">Your First Name<span class="required-field">*</span>
+                </label>
+                <input type="text" id="firstname" name="firstname" required="on" minlength="2" maxlength="35" > 
+                <label for="lastname">Your Last Name<span class="required-field">*</span>
+                </label>
+                <input type="text" id="lastname" name="lastname" required="on" minlength="2" maxlength="35" > 
+                <label for="age">Your Age</label>
+              
+                <input type="number" name="age" id="age" type="number" min="0" max="120">  
+                <h5>One Must be 21 or older to Enter the Contest</h5>
+
                 <fieldset>
                     <legend>Your Contact Info</legend>
-                    <label for="email">Your Email</label>
-                    <input type="text" id="email" name="email"> 
+                    <label for="email">Your Email<span class="required-field">*</span>
+                    </label>
+                    <input type="text" id="email" name="email" required="on"> 
                     <!-- Todo: Street Address Input -->
                     <!-- Todo: City, State, and Zip Inputs -->
                     
@@ -83,10 +90,10 @@
                         <option value="WI">Wisconsin</option>
                         <option value="WV">West Virginia</option>
                         <option value="WY">Wyoming</option>
-                    </select>
+                </datalist>
                 
                 <label for="zip code">Your Zip Code</label> 
-                <input type="text" id="ZipCode" name="ZipCode">   
+                <input type="text" id="ZipCode" name="ZipCode" type="number">   
                 </fieldset>
                 <fieldset>
                     <legend>Your Preferences</legend>
@@ -109,6 +116,7 @@
                     <label for="buffet"> Buffet</label>
                 </fieldset>
                 <input type="Submit" value="Enter the Contest">
+            
             </form>
             
            <!---<div>
